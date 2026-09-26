@@ -36,8 +36,22 @@ export default [
   // TypeScript-specific overrides
   {
     files: ["**/*.ts"],
+    ignores: ["**/*.astro", "**/*.astro/**"],
     languageOptions: {
       parser: tseslint.parser,
+    },
+    rules: {
+      indent: ["error", 4, { SwitchCase: 1 }],
+      quotes: ["error", "single", { avoidEscape: true }],
+      semi: ["error", "always"],
+    },
+  },
+
+  // Playwright specs and config use two-space indentation.
+  {
+    files: ["e2e-tests/**/*.ts", "playwright.config.ts"],
+    rules: {
+      indent: ["error", 2, { SwitchCase: 1 }],
     },
   },
 ];

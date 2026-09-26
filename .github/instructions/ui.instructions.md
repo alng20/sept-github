@@ -49,7 +49,7 @@ Refer to technology-specific instruction files:
 - Create reusable components for common UI patterns
 - Keep components focused on a single responsibility
 - Use props for configuration, not duplication
-- Document component APIs with TypeScript types
+- Document each reusable Astro component's `Props` interface so its public API is self-explanatory (see [`astro.instructions.md`](astro.instructions.md))
 
 ## Development Workflow
 
